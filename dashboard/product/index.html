@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="/" class="logo">Ecowiser</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="/dashboard/product" class="nav-item active">
+                    <i class="fas fa-box"></i> Products
+                </a>
+                <a href="/dashboard/brand" class="nav-item">
+                    <i class="fas fa-tags"></i> Brands
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="productSearch" placeholder="Search products..." class="search-input">
+                    <button class="clear-search hidden" id="clearProductSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="profile-btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Products</h1>
+                    <button class="btn btn-primary" onclick="window.location.href='add-product.html'">Add Product</button>
+                </div>
+
+                <!-- Actions for selected products -->
+         
+
+                <!-- Product Table -->
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="selectAll"></th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <!-- JavaScript will populate rows -->
+                        </tbody>
+                    </table>
+                </div>
+
+                
+            </main>
+            <div  style="width:100%; padding: 10px; display: flex; justify-content: end; " class="hidden">
+            <div id="selectedActions"  class="hidden">
+        
+                <button id="deleteSelected" class="btn btn-danger">Delete Selected <span id="selectedCount">0</span></button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="../../server.js"></script>
+</body>
+</html>

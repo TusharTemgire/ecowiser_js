@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <main class="container">
+    <div class="login-container">
+      <div class="login-box">
+        <div class="header">
+          <h1>Get Started</h1>
+          <p>Welcome to Ecowiser - Let's create your account</p>
+        </div>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="hi@ecowiser.com"
+              autocomplete="email"
+              value="ecowiser@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="abc@123"
+                value="Demo@123"
+                required
+              />
+              <svg
+                id="togglePassword"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="eye-icon"
+              >
+                <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path>
+                <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path>
+                <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path>
+                <path d="m2 2 20 20"></path>
+              </svg>
+            </div>
+          </div>
+          <button type="submit" class="btn">Sign in</button>
+          <div class="footer">
+            <p>Create new account? <a href="/auth/signup.html">Sign Up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="auth.js"></script>
+  <script src="./../server.js"></script>
+
+</body>
+</html>
