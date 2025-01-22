@@ -66,9 +66,9 @@ A simple HTML, CSS, and JavaScript dashboard project with user authentication an
 
 1. Place your images in the `assets/images` directory
 2. Reference images in your HTML files like this:
-   ```html
+ 
    <img src="Capture.PNG" alt="Description">
-   ```
+
 
 ## Features
 
